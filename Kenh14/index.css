@@ -234,14 +234,22 @@ ul{
 .hvc a{
     font-size: 19px;
 }
+.wrapper{
+    transform: translateX(0px);
+    position: relative;
+    overflow: hidden;   
+}
+.list-slide{
+    display: flex;
+    position: relative;
+    transition: transform 0.3s linear;
+}
 .slide-wrapper{
     position: relative;
     margin-top: 30px;
     width: 720px;
-    overflow: hidden;
 }
 .slide-wrapper ul{
-    display: flex;
     flex-wrap: nowrap;
 }
 .slide{
@@ -272,6 +280,27 @@ ul{
     margin-top: 15px;
     bottom: 0;
 }
+.button-next{
+    background: url(https://kenh14cdn.com/web_images/sprite-k14.20.png) -115px -137px no-repeat;
+    background-color: #fb6c27e6;
+    position: absolute;
+    top: 36px;
+    right: 0;
+    width: 35px;
+    height: 95px;
+}
+.button-prev{
+    background-color: #333;
+    width: 35px;
+    opacity: .8;
+    display: block;
+    background: url(https://kenh14cdn.com/web_images/sprite-k14.20.png) -70px -137px no-repeat;
+    position: absolute;
+    top: 35px;
+    width: 35px;
+    height: 95px;
+    left: 0;
+}
 .dot{
     margin: 6px;
     width: 8px;
@@ -280,8 +309,9 @@ ul{
     border-radius: 100%;
     background: #000;
     opacity: .2;
+    transition: background-color 0.05s linear;
 }
-.red{
+.dot1{
     background-color: red;
     opacity: .8;
 }
